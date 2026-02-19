@@ -1,0 +1,24 @@
+header nav {
+    max-width: 80rem;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width: 2rem;
+        height: 2rem;
+
+        transition: transform 0.3s;
+    }
+
+    img[src*='logo']:hover {
+        transform: rotate(90deg);
+    }
+
+}
+

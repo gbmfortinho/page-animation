@@ -38,7 +38,7 @@ h1{
     line-height: 1.25rem;
 }
 
-h2{
-    font-size: var(--text-lg)   ;
+h2 {
+    font-size: var(--text-lg);
     line-height: 1.2rem;
 }
