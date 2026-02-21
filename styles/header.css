@@ -4,9 +4,8 @@ header nav {
     padding: 1.25rem 2rem;
     display: flex;
     align-items: center;
+    margin-inline: auto;
 
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 
     img {
