@@ -1,14 +1,23 @@
+/* ================= HERO ================= */
+
 section.hero {
   max-width: 80rem;
   width: 100%;
   padding: 2.5rem 2rem;
   margin-inline: auto;
 
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
 }
 
-& h1 {
+/* ===== LADO ESQUERDO ===== */
+
+.hero .content {
   max-width: 40rem;
 }
+
 
 & h1 div {
   display: inline-block;
@@ -43,14 +52,14 @@ section.hero {
   display: flex;
   gap: 2rem;
   margin-top: 3rem;
-
+  
   & .button {
     display: flex;
     align-items: center;
     gap: .75rem;
-
+    
     border-radius: 5rem;
-     transition: scale 350ms;
+    transition: scale 350ms;
 
     &.buy {
       padding: 1.5rem 3rem;
@@ -62,10 +71,10 @@ section.hero {
       border-radius: 50%;
       background-color: white;
       display: flex;
-
-
+      
+      
     }
-
+    
     &:hover {
       scale: 1.1;
     }
@@ -78,7 +87,58 @@ section.hero {
       0 2px 12px rgb(0 0 0 / .05),
       0 2px 15px rgb(0 0 0 / .1);
   }
+  
+}
+/* ===== LADO DIREITO (IMAGENS) ===== */
 
+.hero .container {
+  position: relative;
+  max-width: 35rem;
+  width: 100%;
+  height: 100%;
+
+  border: 2px solid blue;
+}
+
+/* Ellipse fundo */
+.hero .ellipse {
+  width: 100%;
+  height: 100%;
+
+  transform: translateX(200%);
+  animation: slidein 3s ease forwards;
+
+}
+
+/* Patins centralizado */
+.hero .patins {
+  position: absolute;
+  top: 0%;
+  left: 5%;
+  width: 90%;
+ 
+  transform: translateX(100%);
+  animation: slidein 3s ease forwards;
+}
+
+/* Estrelas */
+.hero .stars1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.hero .stars2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes slidein {
+ 
+  100% {
+    transform: translatex(0);
+  }
 }
 
 @keyframes slideup {
