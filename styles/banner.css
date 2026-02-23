@@ -1,8 +1,11 @@
 .banner {
-  
+
+  max-width: 120rem;
+  margin-inline: auto;
   width: 100%;
   overflow: hidden;
-  padding-block: 2.5rem;
+  padding-block: 1.5rem;
+ 
 
   .scroller {
     background: linear-gradient(
@@ -12,6 +15,7 @@
     width: 100%;
     overflow: hidden;
     padding-block: 1rem;
+    
   
     
   } 

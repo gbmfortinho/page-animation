@@ -1,0 +1,91 @@
+section.gallery {
+  width: 100%;
+  max-width: 80rem;
+  padding: 2.5rem 2rem;
+  margin-inline: auto;
+}
+
+section.gallery .img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Usar um wrapper com overflow:hidden para evitar salto ao escalar */
+section.gallery .container > .gallery-item {
+  overflow: hidden;
+  border-radius: 0.5rem;
+
+  animation: slideup 1s linear backwards;
+}
+
+section.gallery .container > .gallery-item > img {
+  transition: transform 0.25s ease;
+  transform-origin: center;
+  will-change: transform;
+  cursor: pointer;
+  height: 25rem;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+section.gallery .container > .gallery-item:hover > img {
+  transform: scale(1.05);
+}
+
+section.gallery .container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-areas:
+    "A B B"
+    "C C D";
+  gap: 2.5rem;
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+section.gallery .container > :nth-child(1) {
+  grid-area: A;
+}
+
+section.gallery .container > :nth-child(2) {
+  grid-area: B;
+}
+
+section.gallery .container > :nth-child(3) {
+  grid-area: C;
+}
+
+section.gallery .container > :nth-child(4) {
+  grid-area: D;
+}
+
+section.gallery .title {
+  gap: .75rem;
+  font: 700 2rem/1.3 "Syne", sans-serif;
+  
+}
+/* (altura e estilo das imagens agora definidos acima em .gallery-item > img) */
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
